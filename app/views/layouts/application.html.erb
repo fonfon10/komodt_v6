@@ -20,9 +20,17 @@
   </head>
 
   <body>
-    <i class="fas fa-trash"></i>
-    <i class="fab fa-facebook-f"></i>
+    <%= render 'layouts/navbar'  %>
 
-    <%= yield %>
+
+    <% if user_signed_in?  %>
+      <h3> <%= current_user.firstname %> </h3>
+    <% end %>
+
+
+
+    <div id="main-container" class="container-fluid" >
+        <%= yield %>
+    </div>
   </body>
 </html>

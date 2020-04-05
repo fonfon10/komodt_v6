@@ -1,0 +1,35 @@
+<nav class="navbar navbar-dark bg-success">
+    <%= link_to "KOMODT", root_path, class:"navbar-brand" %>
+
+
+
+<% if current_user.present? %>
+  
+      <ul class="nav-item">
+        <a class="nav-link">
+          <%= link_to edit_user_registration_path(current_user) do %>
+              <i class="fas fa-user"></i> Profile
+          <% end %>
+        </a>
+      </ul>
+
+
+      <ul class="nav-item">
+        <a class="nav-link">
+          <%= link_to destroy_user_session_path, method: :delete do %>
+              <i class="fas fa-sign-out-alt "></i> Signout
+          <% end %>
+        </a>
+      </ul>
+
+
+
+
+
+<% end %>
+
+
+
+
+
+</nav>
