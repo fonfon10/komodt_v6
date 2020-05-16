@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :trackable, :confirmable
 
 
-  
+	belongs_to :role
+
+	has_many :suppliers
+
 
 end

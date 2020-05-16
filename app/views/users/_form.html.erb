@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :role_id %>
-    <%= form.number_field :role_id %>
+    <%= form.label :role %>
+    <%= form.select(:role_id, @roles)%>    
   </div>
 
   <div class="actions">

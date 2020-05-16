@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @supplier.user_id %>
+  <strong>Created by:</strong>
+  <%= @supplier.user.firstname %> <%= @supplier.user.lastname %>
 </p>
 
 <%= link_to 'Edit', edit_supplier_path(@supplier) %> |
